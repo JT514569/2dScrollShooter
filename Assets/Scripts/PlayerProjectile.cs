@@ -27,17 +27,14 @@ public class PlayerProjectile : Damage
         }
     }
 
-    /*
     public void OnTriggerEnter2D(Collider2D collision)
     {
         if (gameObject.tag == "Projectile")
             if (collision.tag == "Enemy")
             {
                 Debug.Log("Enemy hit");
-                health.Damage(10f);
                 base.OnTriggerEnter2D(collision);
                 gameObject.SetActive(false);
             }
     }
-    */
 }

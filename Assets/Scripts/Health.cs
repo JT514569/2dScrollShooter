@@ -7,6 +7,7 @@ public class Health : MonoBehaviour
 {
     [Header("Health")]
     [SerializeField] private float StartHP;
+    [SerializeField] private int ScoreGet;
     public float currentHP { get; private set; }
     public Animator anim;
     private bool dead;
@@ -34,6 +35,7 @@ public class Health : MonoBehaviour
         }
         else
         {
+            Score.instance.AddPoint(ScoreGet);
             Destroy(this.gameObject);
                 //anim.SetTrigger("Die");
            //     DeathSound.Play();

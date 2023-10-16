@@ -13,7 +13,8 @@ public class Damage : MonoBehaviour
         {
             Debug.Log("Enemy hurt");
 
-            health.Damage(10f);
+            health.Damage(1f);
+            Score.instance.AddPoint(10);
             // collision.GetComponent<Health>().Damage(damage);
 
         }
