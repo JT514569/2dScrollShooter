@@ -33,7 +33,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &7661465481271998130
 SpriteRenderer:
@@ -99,7 +99,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f452c474b347b347864079caaaaf5ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 1.25
+  damage: 1
   health: {fileID: 7661465481271998129}
 --- !u!114 &7661465481271998129
 MonoBehaviour:
@@ -114,6 +114,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   StartHP: 3
+  ScoreGet: 0
   anim: {fileID: 0}
   sceneName: Game
 --- !u!61 &7661465481271998128

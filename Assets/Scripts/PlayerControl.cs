@@ -10,6 +10,7 @@ public class PlayerControl : MonoBehaviour
     private Rigidbody2D body;
     private Animator anim;
     public Rigidbody2D rb;
+    public Level mylevel;
 
     Vector2 movement;
 
@@ -34,6 +35,26 @@ public class PlayerControl : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
+
+    }
+
+    void Start()
+    {
+        StartCoroutine(AnimLevel());
+    }
+
+    
+     IEnumerator  AnimLevel()
+    {
+        yield return new WaitUntil(() => mylevel.level == 2);
+        Debug.Log("Anim change");
+        anim.SetInteger("LVL", 2);
+        yield return new WaitUntil(() => mylevel.level == 3);
+        Debug.Log("Anim change");
+        anim.SetInteger("LVL", 3);
+        yield return new WaitUntil(() => mylevel.level == 4);
+        Debug.Log("Anim change");
+        anim.SetInteger("LVL", 4);
 
     }
 }
