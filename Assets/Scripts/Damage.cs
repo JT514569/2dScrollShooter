@@ -6,14 +6,31 @@ public class Damage : MonoBehaviour
 {
     [SerializeField] public float damage;
     public Health health;
+    public Level Levelmy;
+    public float DamageNumb;
 
     public void OnTriggerEnter2D(Collider2D collision)
     {
     if (collision.tag == "Projectile")
         {
             Debug.Log("Enemy hurt");
-
-            health.Damage(1f);
+            if (Levelmy.level == 1)
+            {
+                DamageNumb = 1;
+            }
+            else if (Levelmy.level == 2)
+            {
+                DamageNumb = 2;
+            }
+            else if (Levelmy.level == 3)
+            {
+                DamageNumb = 5;
+            }
+            else
+            {
+                DamageNumb = 10;
+            }
+            health.Damage(DamageNumb);
             Score.instance.AddPoint(10);
             // collision.GetComponent<Health>().Damage(damage);
 

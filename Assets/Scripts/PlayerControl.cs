@@ -8,9 +8,10 @@ public class PlayerControl : MonoBehaviour
     [SerializeField] public float MoveSpeed;
     private BoxCollider2D boxCollider;
     private Rigidbody2D body;
-    private Animator anim;
+    public static Animator anim;
     public Rigidbody2D rb;
     public Level mylevel;
+    public GameObject GameOver;
 
     Vector2 movement;
 
@@ -33,9 +34,15 @@ public class PlayerControl : MonoBehaviour
         rb.MovePosition(rb.position + movement * MoveSpeed * Time.fixedDeltaTime);
     }
 
-    private void OnCollisionEnter(Collision collision)
+    public void OnTriggerEnter2D(Collider2D collision)
     {
-
+        if (gameObject.tag == "Player")
+            if (collision.tag == "Enemy")
+            {
+                Debug.Log("Player hit");
+                GameOver.SetActive(true);
+                gameObject.SetActive(false);
+            }
     }
 
     void Start()
