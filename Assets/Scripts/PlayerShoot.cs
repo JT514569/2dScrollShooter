@@ -5,18 +5,17 @@ using UnityEngine;
 
 public class PlayerShoot : MonoBehaviour
 {
-    [SerializeField] private float attackCooldown;
+    [SerializeField] private float fireRate;
+    [SerializeField] private float canFire;
     [SerializeField] private Transform firePoint;
     [SerializeField] private GameObject[] arrows;
-    private float cooldownTimer;
 
     private void Update()
     {
         // Update the cooldown timer.
-        cooldownTimer -= Time.deltaTime;
 
         // Check if the player can attack.
-        if (Input.GetKey(KeyCode.Space))
+        if (Input.GetKey(KeyCode.Space) && Time.time > canFire)
         {
             Attack();
         }
@@ -24,18 +23,15 @@ public class PlayerShoot : MonoBehaviour
 
     private void Attack()
     {
-        if  (cooldownTimer <= 0)
-        {
-            // Reset the cooldown timer.
-            cooldownTimer = attackCooldown;
+        // Reset the cooldown timer.
+        canFire = Time.time + fireRate;
 
-            // Find an available arrow to shoot.
-            int arrowIndex = FindArrow();
-            if (arrowIndex != -1)
-            {
-                arrows[arrowIndex].transform.position = firePoint.position;
-                arrows[arrowIndex].GetComponent<PlayerProjectile>().ActivateProjectile();
-            }
+        // Find an available arrow to shoot.
+        int arrowIndex = FindArrow();
+        if (arrowIndex != -1)
+        {
+            arrows[arrowIndex].transform.position = firePoint.position;
+            arrows[arrowIndex].GetComponent<PlayerProjectile>().ActivateProjectile();
         }
 
     }
