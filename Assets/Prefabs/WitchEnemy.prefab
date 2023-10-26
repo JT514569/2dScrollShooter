@@ -10,31 +10,31 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 7661465481271998128, guid: f8a993490b4c16f438c1500b2c7bc78e, type: 3}
       propertyPath: m_Size.x
-      value: 2.2150397
+      value: 3.4149776
       objectReference: {fileID: 0}
     - target: {fileID: 7661465481271998128, guid: f8a993490b4c16f438c1500b2c7bc78e, type: 3}
       propertyPath: m_Size.y
-      value: 1.3258288
+      value: 2.555097
       objectReference: {fileID: 0}
     - target: {fileID: 7661465481271998128, guid: f8a993490b4c16f438c1500b2c7bc78e, type: 3}
       propertyPath: m_Offset.x
-      value: 0.07560468
+      value: 0.070905924
       objectReference: {fileID: 0}
     - target: {fileID: 7661465481271998128, guid: f8a993490b4c16f438c1500b2c7bc78e, type: 3}
       propertyPath: m_Offset.y
-      value: -0.05844727
+      value: 0.028984308
       objectReference: {fileID: 0}
     - target: {fileID: 7661465481271998128, guid: f8a993490b4c16f438c1500b2c7bc78e, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
-      value: 3.35
+      value: 3.28
       objectReference: {fileID: 0}
     - target: {fileID: 7661465481271998128, guid: f8a993490b4c16f438c1500b2c7bc78e, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.y
-      value: 1.49
+      value: 2.51
       objectReference: {fileID: 0}
     - target: {fileID: 7661465481271998129, guid: f8a993490b4c16f438c1500b2c7bc78e, type: 3}
       propertyPath: StartHP
-      value: 2
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7661465481271998129, guid: f8a993490b4c16f438c1500b2c7bc78e, type: 3}
       propertyPath: ScoreGet
@@ -43,7 +43,7 @@ PrefabInstance:
     - target: {fileID: 7661465481271998130, guid: f8a993490b4c16f438c1500b2c7bc78e, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 5d6974bfd82a5344885c156f792212e8, type: 3}
+      objectReference: {fileID: 21300000, guid: 536d25824fd8aa04999f9342778b04f3, type: 3}
     - target: {fileID: 7661465481271998130, guid: f8a993490b4c16f438c1500b2c7bc78e, type: 3}
       propertyPath: m_Color.b
       value: 1
@@ -102,7 +102,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7661465481271998132, guid: f8a993490b4c16f438c1500b2c7bc78e, type: 3}
       propertyPath: m_Name
-      value: HandEnemy
+      value: WitchEnemy
       objectReference: {fileID: 0}
     - target: {fileID: 7661465481271998132, guid: f8a993490b4c16f438c1500b2c7bc78e, type: 3}
       propertyPath: m_IsActive
@@ -128,7 +128,7 @@ PrefabInstance:
       addedObject: {fileID: 9140191233606487245}
     - targetCorrespondingSourceObject: {fileID: 7661465481271998132, guid: f8a993490b4c16f438c1500b2c7bc78e, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 3450873279651569607}
+      addedObject: {fileID: 784288052785641484}
   m_SourcePrefab: {fileID: 100100000, guid: f8a993490b4c16f438c1500b2c7bc78e, type: 3}
 --- !u!1 &802713884190096054 stripped
 GameObject:
@@ -147,7 +147,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 360f34adad3963543bca49227081ba5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 2.7
+  speed: 0.7
 --- !u!50 &9140191233606487245
 Rigidbody2D:
   serializedVersion: 4
@@ -175,7 +175,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &3450873279651569607
+--- !u!114 &784288052785641484
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

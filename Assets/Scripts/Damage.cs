@@ -31,7 +31,7 @@ public class Damage : MonoBehaviour
                 DamageNumb = 10;
             }
             health.Damage(DamageNumb);
-            Score.instance.AddPoint(10);
+            Score.instance.AddPoint(5);
             // collision.GetComponent<Health>().Damage(damage);
 
         }

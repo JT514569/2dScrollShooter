@@ -33,8 +33,12 @@ PrefabInstance:
       value: 1.27
       objectReference: {fileID: 0}
     - target: {fileID: 7661465481271998129, guid: f8a993490b4c16f438c1500b2c7bc78e, type: 3}
+      propertyPath: StartHP
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7661465481271998129, guid: f8a993490b4c16f438c1500b2c7bc78e, type: 3}
       propertyPath: ScoreGet
-      value: 25
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7661465481271998130, guid: f8a993490b4c16f438c1500b2c7bc78e, type: 3}
       propertyPath: m_Sprite
@@ -108,6 +112,10 @@ PrefabInstance:
       propertyPath: damage
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 7661465481271998133, guid: f8a993490b4c16f438c1500b2c7bc78e, type: 3}
+      propertyPath: Levelmy
+      value: 
+      objectReference: {fileID: 8426857121582823699, guid: aba4f12c98485094d9adb82983868a89, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -121,6 +129,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7661465481271998132, guid: f8a993490b4c16f438c1500b2c7bc78e, type: 3}
       insertIndex: -1
       addedObject: {fileID: 5914547566952727676}
+    - targetCorrespondingSourceObject: {fileID: 7661465481271998132, guid: f8a993490b4c16f438c1500b2c7bc78e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1179288808132234605}
   m_SourcePrefab: {fileID: 100100000, guid: f8a993490b4c16f438c1500b2c7bc78e, type: 3}
 --- !u!1 &802713884190096054 stripped
 GameObject:
@@ -139,7 +150,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 360f34adad3963543bca49227081ba5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 2
+  speed: 1.4
 --- !u!50 &9140191233606487245
 Rigidbody2D:
   serializedVersion: 4
@@ -188,3 +199,16 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1179288808132234605
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 802713884190096054}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4943873d8f461f45ae9ec038bb6e197, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  WaveSpawn: []
