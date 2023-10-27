@@ -9,6 +9,7 @@ public class PlayerShoot : MonoBehaviour
     [SerializeField] private float canFire;
     [SerializeField] private Transform firePoint;
     [SerializeField] private GameObject[] arrows;
+    [SerializeField] private AudioSource Shoot;
 
     private void Update()
     {
@@ -28,6 +29,7 @@ public class PlayerShoot : MonoBehaviour
 
         // Find an available arrow to shoot.
         int arrowIndex = FindArrow();
+        Shoot.Play();
         if (arrowIndex != -1)
         {
             arrows[arrowIndex].transform.position = firePoint.position;

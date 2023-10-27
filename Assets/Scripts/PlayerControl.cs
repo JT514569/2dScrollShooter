@@ -12,6 +12,8 @@ public class PlayerControl : MonoBehaviour
     public Rigidbody2D rb;
     public Level mylevel;
     public GameObject GameOver;
+    [SerializeField] private AudioSource deathNoise;
+    [SerializeField] private AudioSource levelUp;
 
     Vector2 movement;
 
@@ -40,6 +42,7 @@ public class PlayerControl : MonoBehaviour
             if (collision.tag == "Enemy")
             {
                 Debug.Log("Player hit");
+                deathNoise.Play();
                 GameOver.SetActive(true);
                 gameObject.SetActive(false);
             }
@@ -56,12 +59,15 @@ public class PlayerControl : MonoBehaviour
         yield return new WaitUntil(() => mylevel.level == 2);
         Debug.Log("Anim change");
         anim.SetInteger("LVL", 2);
+        levelUp.Play();
         yield return new WaitUntil(() => mylevel.level == 3);
         Debug.Log("Anim change");
         anim.SetInteger("LVL", 3);
+        levelUp.Play();
         yield return new WaitUntil(() => mylevel.level == 4);
         Debug.Log("Anim change");
         anim.SetInteger("LVL", 4);
+        levelUp.Play();
 
     }
 }

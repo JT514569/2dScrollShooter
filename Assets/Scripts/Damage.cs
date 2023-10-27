@@ -8,6 +8,7 @@ public class Damage : MonoBehaviour
     public Health health;
     public Level Levelmy;
     public float DamageNumb;
+    [SerializeField] private AudioSource Bam;
 
     public void OnTriggerEnter2D(Collider2D collision)
     {
@@ -31,6 +32,7 @@ public class Damage : MonoBehaviour
                 DamageNumb = 10;
             }
             health.Damage(DamageNumb);
+            Bam.Play();
             Score.instance.AddPoint(5);
             // collision.GetComponent<Health>().Damage(damage);
 
